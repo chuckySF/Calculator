@@ -21,10 +21,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gwT-NI-kR8">
                                 <rect key="frame" x="20" y="40" width="560" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-af-MYA">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LkC-af-MYA">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFd-Cg-i5N">
                                         <rect key="frame" x="187" y="0.0" width="186" height="30"/>
@@ -32,10 +32,10 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-da-E05">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-da-E05">
                                         <rect key="frame" x="373" y="0.0" width="187" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -44,6 +44,7 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDd-TX-Raj">
                                 <rect key="frame" x="20" y="78" width="560" height="21"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="kSg-Wo-qDY"/>
                                 </constraints>
@@ -51,18 +52,63 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-cJ-62B">
+                                <rect key="frame" x="20" y="119" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m01-0o-dsW">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="onOperationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLX-aQ-iZR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gB-Gk-2s4">
+                                        <rect key="frame" x="140" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="onOperationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaK-l8-mLu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-lF-DcB">
+                                        <rect key="frame" x="280" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="x"/>
+                                        <connections>
+                                            <action selector="onOperationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7E-Oj-5rQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsS-q6-L52">
+                                        <rect key="frame" x="420" y="0.0" width="140" height="30"/>
+                                        <state key="normal" title="\"/>
+                                        <connections>
+                                            <action selector="onOperationTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ssv-Vf-Q9K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lb7-2J-UVl"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FDd-TX-Raj" firstAttribute="top" secondItem="gwT-NI-kR8" secondAttribute="bottom" constant="8" id="5WS-hX-LAC"/>
                             <constraint firstItem="FDd-TX-Raj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DfC-at-Pcm"/>
+                            <constraint firstItem="Bb3-cJ-62B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Lzm-7G-J4F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gwT-NI-kR8" secondAttribute="trailing" id="NZF-V6-nPe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bb3-cJ-62B" secondAttribute="trailing" id="ObL-cH-oVJ"/>
                             <constraint firstItem="gwT-NI-kR8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="SYy-B8-zCZ"/>
                             <constraint firstItem="FDd-TX-Raj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aar-hO-Fzq"/>
                             <constraint firstItem="gwT-NI-kR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nGw-4W-UGs"/>
+                            <constraint firstItem="Bb3-cJ-62B" firstAttribute="top" secondItem="FDd-TX-Raj" secondAttribute="bottom" constant="20" id="oUx-st-YAs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FDd-TX-Raj" secondAttribute="trailing" id="uMH-xJ-vbp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="FDd-TX-Raj" id="034-mL-SMp"/>
+                        <outlet property="operand1" destination="LkC-af-MYA" id="02F-lF-qk9"/>
+                        <outlet property="operand2" destination="iVs-da-E05" id="Q8L-xf-H5Y"/>
+                        <outlet property="operationLabel" destination="wFd-Cg-i5N" id="cNf-di-PzE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
